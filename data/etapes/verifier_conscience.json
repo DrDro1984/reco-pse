@@ -1,9 +1,43 @@
 {
   "id": "verifier_conscience",
-  "question": "La zone est sécurisée. Que fais-tu ensuite ?",
-  "attendus": ["parler", "stimuler", "conscience"],
+  "question": "La victime est au sol. Comment vérifies-tu sa conscience ?",
+
+  "sous_etapes": [
+    {
+      "id": "se_presenter_parler",
+      "attendus": [
+        "je lui parle",
+        "je parle a la victime",
+        "je me presente",
+        "je l appelle",
+        "je crie",
+        "parler"
+      ],
+      "feedback": "Tu te présentes et tu parles à la victime pour provoquer une réaction."
+    },
+    {
+      "id": "demander_ouvrir_yeux",
+      "attendus": [
+        "ouvrir les yeux",
+        "ouvre les yeux",
+        "ouvrez les yeux"
+      ],
+      "feedback": "Demander d’ouvrir les yeux permet d’évaluer une réponse consciente."
+    },
+    {
+      "id": "demander_serrer_mains",
+      "attendus": [
+        "serrer les mains",
+        "serre les mains",
+        "serre ma main",
+        "serrez ma main"
+      ],
+      "feedback": "Demander de serrer les mains permet d’évaluer une réponse motrice."
+    }
+  ],
+
   "feedback": {
-    "ok": "Correct : tu vérifies la conscience de la victime.",
-    "ko": "Il faut vérifier si la victime est consciente."
+    "ok": "Correct : la conscience est vérifiée en parlant à la victime et en lui demandant d’effectuer des actions simples.",
+    "ko": "La vérification de la conscience se fait en parlant à la victime et en lui demandant des actions simples."
   }
 }
