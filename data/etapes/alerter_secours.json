@@ -1,0 +1,1 @@
+{"id":"alerter_secours","question":"La victime ne respire pas. Que fais-tu ?","attendus":["alerter","appeler les secours","112","15","18"],"feedback":{"ok":"Correct : tu alertes immédiatement les secours.","ko":"Il faut alerter les secours dès que l'arrêt cardiaque est constaté."}}

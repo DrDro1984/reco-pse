@@ -1,0 +1,1 @@
+{"id":"massage_cardiaque","question":"Les secours sont alertés. Que fais-tu en attendant ?","attendus":["massage","compressions","rcp"],"feedback":{"ok":"Correct : tu commences immédiatement les compressions thoraciques.","ko":"Il faut débuter immédiatement un massage cardiaque."}}

@@ -1,0 +1,1 @@
+{"id":"appeler_aide","question":"La victime ne réagit pas. Que fais-tu ?","attendus":["appeler a l'aide","crier","demander de l'aide"],"feedback":{"ok":"Correct : tu appelles à l'aide pour ne pas rester seul.","ko":"Il faut appeler à l'aide avant de poursuivre la prise en charge."}}

@@ -1,0 +1,1 @@
+{"id":"verifier_respiration","question":"La victime ne réagit pas. Que fais-tu maintenant ?","attendus":["respiration","regarder","ecouter","sentir"],"feedback":{"ok":"Correct : tu vérifies la respiration pendant 10 secondes maximum.","ko":"Il faut vérifier si la victime respire."}}

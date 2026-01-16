@@ -1,0 +1,1 @@
+{"id":"utiliser_dae","question":"Le DAE est disponible. Que fais-tu ?","attendus":["allumer","suivre les instructions","electrodes"],"feedback":{"ok":"Correct : tu allumes le DAE et suis ses instructions.","ko":"Il faut utiliser immédiatement le DAE."}}
