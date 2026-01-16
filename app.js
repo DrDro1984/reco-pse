@@ -1,4 +1,5 @@
 let scenario = null;
+let sousEtapesValidees = [];
 let etapes = {};
 let index = 0;
 
@@ -24,6 +25,9 @@ function normaliser(texte) {
 
 function afficherEtape() {
   const etape = etapes[scenario.etapes[index]];
+
+  sousEtapesValidees = [];
+
   document.getElementById("question").textContent = etape.question;
   document.getElementById("reponse").value = "";
   document.getElementById("feedback").textContent = "";
@@ -35,11 +39,58 @@ function valider() {
     document.getElementById("reponse").value
   );
 
+  const feedback = document.getElementById("feedback");
+
+  // --- CAS 1 : étape avec sous-étapes ---
+  if (etape.sous_etapes) {
+    let progression = false;
+    let messages = [];
+
+    for (const sousEtape of etape.sous_etapes) {
+      if (sousEtapesValidees.includes(sousEtape.id)) {
+        continue;
+      }
+
+      const trouve = sousEtape.attendus.some(attendu =>
+        reponse.includes(normaliser(attendu))
+      );
+
+      if (trouve) {
+        sousEtapesValidees.push(sousEtape.id);
+        progression = true;
+        messages.push("✔️ " + sousEtape.feedback);
+      }
+    }
+
+    if (messages.length > 0) {
+      feedback.innerHTML = messages.join("<br>");
+    }
+
+    if (sousEtapesValidees.length === etape.sous_etapes.length) {
+      setTimeout(() => {
+        feedback.textContent = etape.feedback.ok;
+        index++;
+        if (index < scenario.etapes.length) {
+          setTimeout(afficherEtape, 800);
+        } else {
+          document.getElementById("question").textContent =
+            "Scénario terminé.";
+        }
+      }, 800);
+      return;
+    }
+
+    if (!progression) {
+      feedback.textContent = etape.feedback.ko;
+    }
+
+    return;
+  }
+
+  // --- CAS 2 : étape simple (attendus classiques) ---
   const ok = etape.attendus.some(attendu =>
     reponse.includes(normaliser(attendu))
   );
-
-  const feedback = document.getElementById("feedback");
 
   if (ok) {
     feedback.textContent = etape.feedback.ok;
@@ -54,5 +105,6 @@ function valider() {
     feedback.textContent = etape.feedback.ko;
   }
 }
+
 
 chargerScenario();
