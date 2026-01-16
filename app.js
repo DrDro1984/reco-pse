@@ -3,7 +3,7 @@ let etapes = {};
 let index = 0;
 
 async function chargerScenario() {
-  scenario = await fetch("data/scenarios/arret_cardiaque_adulte.json")
+  scenario = await fetch("data/scenarios/acr.json")
     .then(r => r.json());
 
   for (const id of scenario.etapes) {
