@@ -1,0 +1,9 @@
+{
+  "id": "verifier_conscience",
+  "question": "La zone est sécurisée. Que fais-tu ensuite ?",
+  "attendus": ["parler", "stimuler", "conscience"],
+  "feedback": {
+    "ok": "Correct : tu vérifies la conscience de la victime.",
+    "ko": "Il faut vérifier si la victime est consciente."
+  }
+}
