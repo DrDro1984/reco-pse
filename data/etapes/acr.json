@@ -1,0 +1,8 @@
+{
+  "id": "arret_cardiaque_adulte",
+  "titre": "Arrêt cardiaque – Adulte",
+  "etapes": [
+    "securite",
+    "verifier_conscience"
+  ]
+}
