@@ -1,0 +1,9 @@
+{
+  "id": "securite",
+  "question": "Une personne s'effondre devant toi. Que fais-tu en premier ?",
+  "attendus": ["securiser", "danger", "securite"],
+  "feedback": {
+    "ok": "Correct : tu assures la sécurité de la situation.",
+    "ko": "Il faut d'abord vérifier qu'il n'y a aucun danger."
+  }
+}
